@@ -1,0 +1,15 @@
+<div class="flex flex-col gap-3 items-center justify-between h-20 max-sm:fixed max-sm:top-10 max-sm:abs-horizontal-center">
+  <img src="/icon/logo.svg" alt="Logo" class="w-12 h-9" />
+
+  <ng-container
+    *ngIf="hasContent; else defaultTpl"
+    [ngTemplateOutlet]="template">
+  </ng-container>
+
+  <ng-template #defaultTpl>
+    <button appButton size="sm" [clickable]="false">
+      <span class="mr-1">MAJI</span>
+      <span>Early Access</span>
+    </button>
+  </ng-template>
+</div>

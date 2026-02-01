@@ -1,0 +1,22 @@
+<app-layout-content
+  title="Good things come to those who wait."
+  subTitle="Get Early Access to App and early stage benefits."
+>
+  <app-logo appLayoutLogo></app-logo>
+
+  <app-input-layout class="mt-4">
+    <input
+      appInput
+      name="email"
+      [formControl]="email"
+      [placeholder]="inputPlaceholder"
+      class="w-64 max-sm:w-52"
+      [class]="inputBgClass"
+    />
+    <button appButton appInputSuffix (click)="onSignInClick()">Sign in</button>
+
+    <span appErrorMessage [show]="email.invalid && (email.dirty || email.touched)"
+      >This field is empty or invalid</span
+    >
+  </app-input-layout>
+</app-layout-content>

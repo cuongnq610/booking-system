@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss';
+@import './animations.css';
+@import './centralize.css';
+
+@utility bg-linear-primary {
+  background: linear-gradient(0deg, #fff7e3 0%, #585244 100%);
+}
+
+@utility bg-linear-secondary {
+  background: linear-gradient(0deg, #171512 0%, #585244 100%);
+}
+
+@utility bg-input-linear-primary {
+  background: linear-gradient(90deg, #171512 0%, #585244 100%);
+}
+
+@utility bg-input-linear-secondary {
+  background: linear-gradient(90deg, #171512 0%, #1d8044 100%);
+}
+
+@utility bg-input-linear-danger {
+  background: linear-gradient(90deg, #171512 0%, #9a1c1a 100%);
+}

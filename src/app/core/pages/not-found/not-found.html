@@ -1,0 +1,12 @@
+<app-layout-content
+  title="404 We can’t find this page."
+  subTitle="Let’s bring you back to flow. Click the button below and return to main page."
+>
+  <app-logo appLayoutLogo>
+    <ng-template>
+      <button appButton size="sm" [clickable]="false">Error 404</button>
+    </ng-template>
+  </app-logo>
+
+  <button appButton (click)="goHome()">Go Home</button>
+</app-layout-content>

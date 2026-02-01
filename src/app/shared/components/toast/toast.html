@@ -1,0 +1,18 @@
+<div class="fixed bottom-6 abs-horizontal-center z-50 space-y-2">
+  <div
+    *ngFor="let toast of toasts$ | async"
+    class="px-3 py-1 rounded shadow-lg transition-all duration-300 "
+    [ngClass]="typeClass(toast.type)"
+    [class]="toast.removing ? 'animate-fade-out' : 'animate-slide-up'"
+    >
+    <div class="flex gap-4 items-center justify-between">
+      <div class="text-white">
+        <p class="font-bold">{{ toast.title }}</p>
+        <p class="text-sm">{{ toast.message }}</p>
+      </div>
+      <button appButton size="sm" class="rounded-md" *ngIf="toast.action" (click)="toast.action.onClick()">
+        {{ toast.action.label }}
+      </button>
+    </div>
+  </div>
+</div>

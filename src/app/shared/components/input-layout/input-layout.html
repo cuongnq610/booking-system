@@ -1,0 +1,10 @@
+<div>
+  <div class="flex relative">
+    <ng-content select="[appInputPrefix]"></ng-content>  
+    <ng-content select="input[appInput]"></ng-content>
+    <ng-content select="[appInputSuffix]"></ng-content>
+  </div>
+  <div>
+    <ng-content select="[appErrorMessage]"></ng-content>
+  </div>
+</div>
